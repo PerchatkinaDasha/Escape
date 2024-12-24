@@ -1,0 +1,433 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #000000;
+    font-family: "Rubik Mono One", sans-serif; /* Убедитесь, что используется правильный шрифт */
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px; /* Добавьте отступы для адаптивности */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Заголовок */
+.header {
+    background-color: #ffffff;
+    padding: 20px 15px;
+    display: flex; /* Выровняйте элементы в ряд */
+    align-items: center;
+    justify-content: flex-start; /* Выровняйте элементы по левому краю */
+    position: relative;
+}
+
+.back-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 15px;
+    font-weight: bold;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+}
+
+/* Основной контент */
+.product-content {
+    display: flex;
+    flex-wrap: nowrap; /* Запрещаем перенос строк */
+    justify-content: space-between;
+    padding: 40px 0;
+    overflow-x: auto; /* Добавляем прокрутку по горизонтали при необходимости */
+}
+
+.product-info {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    min-width: 0; /* Позволяет содержимому правильно сжиматься */
+}
+
+/* Левый блок с изображением */
+.product-image-container {
+    position: relative;
+    flex: 0 0 auto; /* Запрещаем сжиматься и расширяться блоку с изображением */
+    width: 50%; /* Или установите нужную ширину */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 713px; /* Фиксированная ширина карточки */
+    height: 827px; /* Фиксированная высота карточки */
+    background-color: #E8E9EB; /* Светлый фон карточки */
+    border: none; /* Убираем обводку */
+    border-radius: 15px; /* Убираем скругление углов */
+    box-shadow: none; /* Убираем тень */
+    margin: 43px 65px 50px 93px;
+
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #eaeaea;
+    border-radius: 4px;
+}
+
+.image-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-weight: bold;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.image-nav.left {
+    left: 0px;
+}
+
+.image-nav.right {
+    right: 0px;
+}
+
+/* Правый блок с деталями товара */
+.product-details {
+    display: flex;
+    flex-direction: column;
+   
+    margin-top: 40px;
+}
+
+.product-name {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.product-price {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.sizes {
+    display: flex;
+    margin-bottom: 20px;
+    width: 446px; /* Устанавливаем ширину для контейнера размерной сетки */
+}
+
+.size-btn {
+    padding: 10px 15px;
+    width: 90px; /* Устанавливаем ширину каждой кнопки */
+    height: 64px; /* Устанавливаем высоту кнопки */
+    border: 1px solid #000000;
+    background-color: #ffffff;
+    font-family: "Rubik";
+    font-weight: 400;
+    font-size: 14px; /* Меньший размер шрифта, чтобы кнопка выглядела аккуратно */
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.size-btn:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.size-btn.selected {
+    background-color: #000000; /* Темный фон для выбранной кнопки */
+    color: #ffffff; /* Белый цвет текста для выбранной кнопки */
+    border: 1px solid #000; /* Черная рамка для выделенной кнопки */
+}
+
+.add-to-cart-btn {
+    padding: 15px;
+    background-color: #fff;
+    color: #000;
+    max-width: 446px;
+    font-family: "Rubik Mono One";
+    font-weight: bold; /* Полужирный текст */
+    font-size: 24px; /* Размер текста */
+    border: 1px solid #000;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    margin-top: 45px;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* Детали товара */
+.product-details-list {
+    margin-top: 20px;
+}
+
+.details-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 24px;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+.details-item span {
+    font-size: 18px;
+}
+
+.details-item:hover {
+    color: #000;
+
+}
+
+.hidden {
+    display: none;
+}
+
+.details-content {
+    margin-top: 10px;
+    font-family: "Rubik";
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #000;
+    max-width: 350px;
+}
+
+/* Стили для модального окна */
+.cart-modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 400px; /* ширина модального окна */
+    height: 100vh; /* высота окна на весь экран */
+    background-color: white;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: none; /* скрыто по умолчанию */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Видимость модального окна */
+.cart-modal.hidden {
+    display: none;
+}
+
+.cart-modal.visible {
+    display: block;
+}
+
+/* Затемнение и размытие заднего фона */
+.cart-modal:before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: -1; /* чтобы фон был за модальным окном */
+}
+
+/* Стили для содержимого модального окна */
+.cart-modal-content {
+    padding: 20px;
+    overflow-y: auto;
+    height: 100%;
+}
+
+/* Кнопка закрытия */
+.close-modal {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Заголовок корзины */
+.cart-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Список товаров в корзине */
+.cart-items {
+    list-style: none;
+    padding: 0;
+}
+
+/* Элемент корзины */
+.cart-item {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+/* Изображение товара */
+.cart-item-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+/* Информация о товаре */
+.cart-item-info {
+    flex: 1;
+}
+
+/* Название товара */
+.cart-item-name {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Размер товара */
+.cart-item-size {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Кнопки изменения количества */
+.cart-item-quantity {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.quantity-decrease,
+.quantity-increase {
+    font-size: 20px;
+    background: none;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.quantity-value {
+    font-size: 16px;
+    margin: 0 10px;
+}
+
+/* Цена товара */
+.cart-item-price {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Общая сумма */
+.cart-total {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+/* Кнопка оформления заказа */
+.checkout-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.checkout-btn:hover {
+    background-color: #45a049;
+}
+
+/* Основной контейнер футера */
+.footer {
+    background-color: #000; /* Черный фон */
+    color: #fff; /* Белый текст */
+    padding: 40px 20px; /* Отступы внутри футера */
+    font-family: "Rubik Mono One"; /* Основной шрифт */
+    font-weight: bold;
+    font-size: 24px; /* Размер текста */
+}
+
+/* Контейнер для списков меню */
+.footer__menu {
+    display: flex;
+    justify-content: center; /* Центровка всех списков */
+    gap: 181px; /* Расстояние между колонками */
+    margin-bottom: 20px; /* Отступ между меню и нижним текстом */
+    flex-wrap: wrap; /* Перенос списков на новую строку, если не хватает места */
+}
+
+/* Списки меню */
+.footer__list {
+    list-style: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем отступы внутри списка */
+    margin: 0; /* Убираем внешние отступы */
+}
+
+/* Элементы списка */
+.footer__item {
+    margin-bottom: 20px; /* Отступ между пунктами списка */
+}
+
+/* Ссылки в меню */
+.footer__link {
+    color: #fff; /* Белый цвет текста */
+    text-decoration: none; /* Убираем подчеркивание */
+    font-family: "Rubik Mono One";
+    font-weight: bold; /* Полужирный текст */
+    transition: color 0.3s; /* Плавное изменение цвета */
+}
+
+.footer__link:hover {
+    color: #ff0000; /* Красный цвет при наведении */
+}
+
+.footer__divider {
+    width: 100%; /* Полоска на всю ширину */
+    height: 2px; /* Толщина полоски */
+    background-color: #fff; /* Белый цвет */
+    opacity: 0.2; /* Прозрачность полоски */
+    margin: 20px 0; /* Отступы сверху и снизу */
+}
+
+/* Нижняя часть футера */
+.footer__bottom {
+    text-align: center; /* Центровка текста */
+}
+
+.footer__text {
+    margin: 43px 0 49px 0; /* Убираем отступы */
+    font-family: "Rubik Mono One";
+    font-weight: bold; /* Полужирный текст */
+    font-size: 24px; /* Размер текста */
+    color: #fff; /* Светло-серый цвет текста */
+}

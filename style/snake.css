@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    font-family: "Rubik Mono One";
+    background-size: contain;
+    color: #000;
+    overflow: hidden; /* Убираем скроллы */
+}
+
+
+.container {
+    width: 100%;
+    height: 100vh; /* Занимает всю высоту окна */
+    text-align: center;
+    padding: 40px 0;
+    box-sizing: border-box;
+    background-image: url("/images/bc.png");
+    position: relative;
+}
+
+.snake-image {
+    padding: 150px 179px 226px 154px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    text-decoration: none;
+    transition: transform 0.2s ease, color 0.2s ease; /* Добавляем плавные переходы */
+}
+
+.close-button img {
+    width: 24px; /* Стандартный размер кнопки */
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.close-button:hover img {
+    transform: scale(1.2); /* Увеличиваем кнопку на 20% при наведении */
+    filter: brightness(1.5); /* Увеличиваем яркость */
+}
+
+.close-button:active img {
+    transform: scale(1.1); /* Уменьшаем увеличение при нажатии */
+    filter: brightness(0.8); /* Затемняем кнопку */
+}

@@ -1,0 +1,196 @@
+html {
+    box-sizing: border-box;
+}
+
+*,*::after,*::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    background-color: #fff;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.header__inner {
+    padding-top: 68px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu__list {
+    display: flex;
+    gap: 48px;
+    padding-top: 24px;
+}
+
+/* Дополнение к .main-content */
+.main-content {
+    display: flex;
+    flex-direction: column; /* Размещаем элементы вертикально */
+    align-items: center; /* Центруем элементы по горизонтали */
+    padding:110px 0;
+    gap: 130px;
+    background-color: #fff;
+}
+
+/* Стили для nav-buttons */
+.nav-buttons {
+    display: flex;
+    gap: 95px; /* Расстояние между кнопками */
+}
+
+.nav-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    font-family: "Rubik One";
+    font-weight: bold;
+    line-height: 122.4%;
+    cursor: pointer;
+    color: black;
+    text-transform: uppercase;
+}
+
+.nav-btn:hover {
+    color: red;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Две колонки */
+    grid-column-gap: 60px; /* Отступ между столбцами */
+    grid-row-gap: 42px; /* Отступ между строками */
+    max-width: 1500px; /* Максимальная ширина галереи */
+    margin: 0 auto; /* Центрируем галерею */
+    justify-content: center; /* Центровка элементов */
+    align-items: center; /* Выравнивание элементов по вертикали */
+}
+
+.gallery__item {
+    display: flex;
+    align-items: center; /* Центрируем содержимое по вертикали */
+    justify-content: center; /* Центрируем содержимое по горизонтали */
+    width: 713px; /* Фиксированная ширина карточки */
+    height: 726px; /* Фиксированная высота карточки */
+    background-color: #E8E9EB; /* Светлый фон карточки */
+    border: none; /* Убираем обводку */
+    border-radius: 15px; /* Убираем скругление углов */
+    box-shadow: none; /* Убираем тень */
+}
+
+.card__image {
+    width: 573px; /* Ширина изображения */
+    height: 540px; /* Высота изображения */
+    object-fit: contain; /* Сохраняем пропорции, чтобы полностью отображать футболку */
+    transition: transform 0.3s ease; /* Анимация при наведении */
+}
+
+.card__image:hover {
+    transform: scale(1.05); /* Легкое увеличение изображения при наведении */
+}
+
+/* Основной контейнер футера */
+.footer {
+    background-color: #000; /* Черный фон */
+    color: #fff; /* Белый текст */
+    padding: 40px 20px; /* Отступы внутри футера */
+    font-family: "Rubik Mono One"; /* Основной шрифт */
+    font-weight: bold;
+    font-size: 24px; /* Размер текста */
+}
+
+/* Контейнер для списков меню */
+.footer__menu {
+    display: flex;
+    justify-content: center; /* Центровка всех списков */
+    gap: 181px; /* Расстояние между колонками */
+    margin-bottom: 20px; /* Отступ между меню и нижним текстом */
+    flex-wrap: wrap; /* Перенос списков на новую строку, если не хватает места */
+}
+
+/* Списки меню */
+.footer__list {
+    list-style: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем отступы внутри списка */
+    margin: 0; /* Убираем внешние отступы */
+}
+
+/* Элементы списка */
+.footer__item {
+    margin-bottom: 20px; /* Отступ между пунктами списка */
+}
+
+/* Ссылки в меню */
+.footer__link {
+    color: #fff; /* Белый цвет текста */
+    text-decoration: none; /* Убираем подчеркивание */
+    font-family: "Rubik Mono One";
+    font-weight: bold; /* Полужирный текст */
+    transition: color 0.3s; /* Плавное изменение цвета */
+}
+
+.footer__link:hover {
+    color: #ff0000; /* Красный цвет при наведении */
+}
+
+.footer__divider {
+    width: 100%; /* Полоска на всю ширину */
+    height: 2px; /* Толщина полоски */
+    background-color: #fff; /* Белый цвет */
+    opacity: 0.2; /* Прозрачность полоски */
+    margin: 20px 0; /* Отступы сверху и снизу */
+}
+
+/* Нижняя часть футера */
+.footer__bottom {
+    text-align: center; /* Центровка текста */
+}
+
+.footer__text {
+    margin: 43px 0 49px 0; /* Убираем отступы */
+    font-family: "Rubik Mono One";
+    font-weight: bold; /* Полужирный текст */
+    font-size: 24px; /* Размер текста */
+    color: #fff; /* Светло-серый цвет текста */
+}
+
+/* Стили для модального окна */
+.modal {
+    display: none; /* По умолчанию скрыто */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Прозрачный черный фон */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 5px;
+    width: 50%;
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}

@@ -1,0 +1,181 @@
+body {
+    margin: 0;
+    font-family: "Rubik Mono One";
+    background: url(/images/Vector.svg) no-repeat center right fixed;
+    background-size: 700px;
+    color: #000;
+    overflow: hidden; /* Убираем скроллы */
+}
+
+.container {
+    width: 100%;
+    height: 100vh; /* Занимает всю высоту окна */
+    text-align: center;
+    padding: 40px 0;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.9);
+    position: relative;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.login-form {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-direction: column;
+}
+
+label {
+    color: rgba(0, 0, 0, 0.74);
+    font-family: "Rubik";
+    font-weight: bold;
+    font-size: 32px;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+input {
+    font-family: "Rubik";
+    font-weight: bold;
+    padding: 32px 10px 24px 38px;
+    font-size: 32px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+    width: 400px;
+    color:rgba(0, 0, 0, 0.4);
+}
+
+input:focus {
+    border-color: #000;
+}
+
+.login-button {
+    font-family: "Rubik";
+    font-weight: bold;
+    padding: 26px 156px;
+    background-color: #000;
+    color: #fff;
+    font-size: 24px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.login-button:hover {
+    background-color: #333;
+}
+
+.login-button:disabled {
+    background-color: #ccc; /* Серый фон для неактивной кнопки */
+    color: #666; /* Цвет текста для неактивной кнопки */
+    cursor: not-allowed; /* Меняем курсор на запрещающий */
+}
+
+.links {
+    margin-top: 30px;
+    font-size: 17px;
+}
+
+.links a {
+    color: #000;
+    text-decoration: underline;
+}
+.text {
+    color:rgba(0, 0, 0, 0.74);
+}
+
+.close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    text-decoration: none;
+    transition: transform 0.2s ease, color 0.2s ease; /* Добавляем плавные переходы */
+}
+
+.close-button img {
+    width: 24px; /* Стандартный размер кнопки */
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.close-button:hover img {
+    transform: scale(1.2); /* Увеличиваем кнопку на 20% при наведении */
+    filter: brightness(1.5); /* Увеличиваем яркость */
+}
+
+.close-button:active img {
+    transform: scale(1.1); /* Уменьшаем увеличение при нажатии */
+    filter: brightness(0.8); /* Затемняем кнопку */
+}
+
+/* Основной контейнер футера */
+.footer {
+    background-color: #000; /* Черный фон */
+    color: #fff; /* Белый текст */
+    padding: 40px 20px; /* Отступы внутри футера */
+    font-family: "Rubik Mono One"; /* Основной шрифт */
+    font-weight: bold;
+    font-size: 24px; /* Размер текста */
+    text-align: center; /* Центрируем текст */
+}
+
+/* Контейнер для списков меню */
+.footer__menu {
+    display: flex;
+    justify-content: center; /* Центровка всех списков */
+    gap: 181px; /* Расстояние между колонками */
+    margin-bottom: 20px; /* Отступ между меню и нижним текстом */
+    flex-wrap: wrap; /* Перенос списков на новую строку, если не хватает места */
+}
+
+/* Списки меню */
+.footer__list {
+    list-style: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем отступы внутри списка */
+    margin: 0; /* Убираем внешние отступы */
+}
+
+/* Элементы списка */
+.footer__item {
+    margin-bottom: 20px; /* Отступ между пунктами списка */
+}
+
+/* Ссылки в меню */
+.footer__link {
+    color: #fff; /* Белый цвет текста */
+    text-decoration: none; /* Убираем подчеркивание */
+    font-family: "Rubik Mono One";
+    font-weight: bold; /* Полужирный текст */
+    transition: color 0.3s; /* Плавное изменение цвета */
+}
+
+.footer__link:hover {
+    color: #ff0000; /* Красный цвет при наведении */
+}
+
+.footer__divider {
+    width: 100%; /* Полоска на всю ширину */
+    height: 2px; /* Толщина полоски */
+    background-color: #fff; /* Белый цвет */
+    opacity: 0.2; /* Прозрачность полоски */
+    margin: 20px 0; /* Отступы сверху и снизу */
+}
+
+/* Нижняя часть футера */
+.footer__bottom {
+    text-align: center; /* Центровка текста */
+}
+
+.footer__text {
+    margin: 43px 0 49px 0; /* Убираем отступы */
+    font-family: "Rubik Mono One";
+    font-weight: bold; /* Полужирный текст */
+    font-size: 24px; /* Размер текста */
+    color: #fff; /* Светло-серый цвет текста */
+}

@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif; /* Используйте вашу подключённую гарнитуру */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Центрирование содержимого по вертикали */
+  min-height: 100vh; /* Высота страницы равна высоте окна */
+  overflow: hidden; /* Убираем прокрутку */
+  background-color: #fff;
+}
+
+.clothing_image {
+  gap: 254px;
+  display: flex;
+  margin: 50px 0;
+}
+
+.header {
+  width: 1400px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-between;
+  padding-top: 0;
+}
+
+.header_text {
+  font-size: 32px;
+  font-family: "Rubik", sans-serif;
+  line-height: 122.4%;
+}
+
+.header_title_conteiner {
+  margin: 110px 505px 49px 11px;
+}
+
+.header_logo {
+  display: flex;
+}
+
+.logo_image {
+  margin: 0 11px 56px 69px;
+}
+
+.header_title {
+  font-size: 64px;
+  font-family: "Rubik Mono One";
+  line-height: 122.4%;
+  margin: 0;
+}
+
+.header_title2 {
+  font-size: 48px;
+  font-family: "Rubik One";
+  line-height: 122.4%;
+  margin: 0;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: #ffffff;
+  height: 120px;
+  border: 5px solid black;
+  border-left: none;
+  border-right: none;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1458px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.text_arrow {
+  font-family: "Rubik Mono One";
+  white-space: nowrap;
+  font-size: 48px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: black;
+  line-height: 1;
+  padding: 30px 426px 31px 619px;
+  border-right: 5px solid black;
+  display: inline-block;
+}
+
+.image-button {
+  background-color: white;
+  border: 5px solid black;
+  padding: 22px 141px 25px 140px;
+  cursor: pointer;
+  border-right: none;
+}
+
+.arrow {
+  height: 59px;
+  width: auto;
+}

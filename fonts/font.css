@@ -1,0 +1,21 @@
+@font-face {
+    font-family: "Rubik Mono One";
+    font-weight: bold;
+    font-style: normal;
+    src: url(/fonts/RubikMonoOne-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Rubik One";
+    font-weight: bold;
+    font-style: normal;
+    src: url(/fonts/RubikOne-Regular.ttf) format("truetype");
+}
+
+
+@font-face {
+    font-family: "Rubik";
+    font-weight: normal;
+    font-style: normal;
+    src: url(/fonts/Rubik-VariableFont_wght.ttf) format("truetype");
+}
