@@ -112,112 +112,20 @@ function setupDetailsToggle() {
     });
 }
 
-// Запускаем функции после загрузки страницы
-document.addEventListener("DOMContentLoaded", () => {
-    displayProduct();
-    setupDetailsToggle();
-});
-
-// Функция для добавления товара в корзину
-function addToCart(productId, size) {
+// Функция для добавления товара в корзину и открытия страницы корзины
+function addToCart() {
+    const productId = getProductId();
     const product = products.find(item => item.id === productId);
-
     if (product) {
-        // Проверяем, есть ли уже такой товар в корзине
-        const existingItem = cart.find(item => item.product.id === productId && item.size === size);
-
-        if (existingItem) {
-            existingItem.quantity++;  // Увеличиваем количество
-        } else {
-            cart.push({ product, size, quantity: 1 });  // Добавляем новый товар
-        }
-
-        updateCart();
-        openCartModal();
+        cart.push(product);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        window.open('basket.html', '_blank');
     }
 }
 
-// Функция для обновления отображения корзины
-function updateCart() {
-    const cartItemsContainer = document.querySelector(".cart-items");
-    cartItemsContainer.innerHTML = '';
-
-    let totalPrice = 0;
-
-    cart.forEach(item => {
-        const li = document.createElement("li");
-        li.classList.add("cart-item");
-
-        li.innerHTML = `
-            <img src="${item.product.image}" alt="${item.product.name}" class="cart-item-image">
-            <div class="cart-item-info">
-                <p class="cart-item-name">${item.product.name}</p>
-                <p class="cart-item-size">Размер: ${item.size}</p>
-                <div class="cart-item-quantity">
-                    <button class="quantity-decrease">-</button>
-                    <span class="quantity-value">${item.quantity}</span>
-                    <button class="quantity-increase">+</button>
-                </div>
-                <p class="cart-item-price">${item.product.price}</p>
-            </div>
-        `;
-
-        // Добавляем события для изменения количества
-        li.querySelector('.quantity-decrease').addEventListener('click', () => {
-            if (item.quantity > 1) {
-                item.quantity--;
-                updateCart();
-            }
-        });
-
-        li.querySelector('.quantity-increase').addEventListener('click', () => {
-            item.quantity++;
-            updateCart();
-        });
-
-        cartItemsContainer.appendChild(li);
-
-        // Суммируем общую стоимость
-        totalPrice += parseInt(item.product.price.replace(" RUB", ""), 10) * item.quantity;
-    });
-
-    document.querySelector(".cart-total span").textContent = `${totalPrice} RUB`;
-}
-
-// Функция для открытия модального окна корзины
-function openCartModal() {
-    document.querySelector(".cart-modal").classList.remove("hidden");
-}
-
-// Закрытие корзины
-document.querySelector(".close-modal").addEventListener("click", () => {
-    document.querySelector(".cart-modal").classList.add("hidden");
+// Установка обработчика события для кнопки "В корзину"
+document.addEventListener("DOMContentLoaded", () => {
+    displayProduct();
+    setupDetailsToggle();
+    document.getElementById('add-to-cart-btn').addEventListener('click', addToCart);
 });
-
-// Оформление заказа
-function checkout() {
-    alert("Заказ оформлен!");
-    cart = [];  // Очищаем корзину
-    updateCart();  // Обновляем корзину
-}
-
-// Добавление события на кнопку оформления заказа
-document.querySelector(".checkout-btn").addEventListener("click", checkout);
-
-// Событие на добавление товара в корзину
-document.querySelector('.add-to-cart-btn').addEventListener('click', () => {
-    const size = document.querySelector('.size-btn.selected')?.textContent || 'S';  // Получаем выбранный размер, по умолчанию S
-    const productId = getProductId();
-    addToCart(productId, size);
-});
-
-// Событие для выбора размера
-document.querySelectorAll('.size-btn').forEach(button => {
-    button.addEventListener('click', () => {
-        document.querySelectorAll('.size-btn').forEach(btn => btn.classList.remove('selected'));  // Убираем выделение с других кнопок
-        button.classList.add('selected');  // Выделяем выбранный размер
-    });
-});
-
-// Запуск функции отображения товара после загрузки страницы
-document.addEventListener("DOMContentLoaded", displayProduct);
