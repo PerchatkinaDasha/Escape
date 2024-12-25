@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет</title>
+    <link rel="stylesheet" href="/fonts/font.css">
+    <link rel="stylesheet" href="/style/form.css">
+</head>
+<body>
+    <div class="container">
+        <a href="main.html" class="close-button">
+            <img src="/images/image 31.svg" alt="крестик" class="">
+        </a>
+        <h1>Личный кабинет</h1>
+        <form class="login-form" id="loginForm">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="tim0ti12321@gmail.com" required>
+            
+            <label for="password">Ваш пароль</label>
+            <input type="password" id="password" name="password" placeholder="*********" required  minlength="6">
+            
+            <button src="main.html" type="submit" class="login-button" disabled>Войти</button>
+        </form>
+        <div class="links">
+            <p class="text">Еще не зарегистрированы? <a href="register.html">Зарегистрироваться</a></p>
+            <p class="text">Забыли пароль? <a href="reset-password.html">Восстановить</a></p>
+        </div>
+        <footer class="footer">
+            <div class="footer__menu">
+                <ul class="footer__list">
+                    <li class="footer__item"><a href="index.html" class="footer__link">О компании</a></li>
+                    <li class="footer__item"><a href="main.html" class="footer__link">Каталог</a></li>
+                </ul>
+                <ul class="footer__list">
+                    <li class="footer__item"><a href="contact.html" class="footer__link">Контакты</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Поддержка</a></li>
+                </ul>
+                <ul class="footer__list">
+                    <li class="footer__item"><a href="oder.html" class="footer__link">Условия оплаты</a></li>
+                    <li class="footer__item"><a href="return.html" class="footer__link">Обмен и возврат</a></li>
+                    <li class="footer__item"><a href="delivery.html" class="footer__link">Доставка</a></li>
+                </ul>
+                <ul class="footer__list">
+                    <li class="footer__item"><a href="#" class="footer__link">Заказать звонок</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Магазины</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">ЦСО №3</a></li>
+                </ul>
+            </div>
+            <div class="footer__divider"></div> <!-- Полоска -->
+            <div class="footer__bottom">
+                <p class="footer__text">2024, © ESCAPE, СВЯЗЬ-СВЯЗЬ-СВЯЗЬ</p>
+            </div>
+        </footer>
+    </div>
+    <script src="/form.js"></script>
+</body>
+</html>

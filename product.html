@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESCAPE | Товар</title>
+    <link rel="stylesheet" href="/style/product.css">
+    <link rel="stylesheet" href="/fonts/font.css">
+    <script src="/script.js" defer></script> <!-- Подключение внешнего скрипта -->
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="main.html" class="back-button">← НАЗАД</a>
+        </div>
+    </header>
+
+    <main class="product-content">
+        <section class="product-info">
+            <div class="product-image-container">
+                <button class="image-nav left">
+                    <img src="/images/arrow_left.svg" alt="стрелка влево ">
+                </button>
+                <img src="" alt="" class="product-image">
+                <button class="image-nav right">
+                    <img src="/images/arrow_right.svg" alt="стрелка вправо">
+                </button>
+            </div>
+            <div class="product-details">
+                <h1 class="product-name"></h1>
+                <p class="product-price"></p>
+                <p class="product-description"></p>
+                <div class="sizes">
+                    <button class="size-btn">XS</button>
+                    <button class="size-btn">S</button>
+                    <button class="size-btn">M</button>
+                    <button class="size-btn">L</button>
+                    <button class="size-btn">XL</button>
+                </div>
+                <button class="add-to-cart-btn">В КОРЗИНУ</button>
+                <div class="product-details-list">
+                    <button class="details-item">информация о товаре <span>+</span></button>
+                    <div class="details-content hidden">
+                        <p>Состав: 100% хлопок<br>Плотность: 240 г<br>Принт: шелкография</p>
+                    </div>
+                
+                    <button class="details-item">таблица размеров <span>+</span></button>
+                    <div class="details-content hidden">
+                        <p>(S) 0см – 168см<br>(M) 168см – 176см<br>(L) 176см – 184см<br>(XL) 184см – 190см</p>
+                    </div>
+                
+                    <button class="details-item">доставка и оплата <span>+</span></button>
+                    <div class="details-content hidden">
+                        <p>Отправка 3-7 рабочих дней. С условиями возврата, спецификой доставки & оплаты можно ознакомиться [на странице]</p>
+                    </div>
+                
+                    <button class="details-item">инструкция по уходу <span>+</span></button>
+                    <div class="details-content hidden">
+                        <p>Плохое или некачественное средство может оказывать сильное влияние на текстуру ткани и исказить цвет.Рекомендации по стирке: 30 градусов, наизнанку в деликатном режиме</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Корзина -->
+    <div class="cart-modal hidden">
+        <div class="cart-modal-content">
+            <button class="close-modal">×</button>
+            <h2 class="cart-title">Корзина</h2>
+            <ul class="cart-items">
+                <li class="cart-item">
+                    <img src="" alt="Футболка" class="cart-item-image">
+                    <div class="cart-item-info">
+                        <p class="cart-item-name">ESCAPE VYCORS</p>
+                        <p class="cart-item-size">Размер: S</p>
+                        <div class="cart-item-quantity">
+                            <button class="quantity-decrease">-</button>
+                            <span class="quantity-value">1</span>
+                            <button class="quantity-increase">+</button>
+                        </div>
+                        <p class="cart-item-price">3400 RUB</p>
+                    </div>
+                </li>
+            </ul>
+            <p class="cart-total">Сумма: <span>3400 RUB</span></p>
+            <button class="checkout-btn">Оформить заказ</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer__menu">
+            <ul class="footer__list">
+                <li class="footer__item"><a href="#" class="footer__link">О компании</a></li>
+                <li class="footer__item"><a href="#" class="footer__link">Каталог</a></li>
+            </ul>
+            <ul class="footer__list">
+                <li class="footer__item"><a href="#" class="footer__link">Контакты</a></li>
+                <li class="footer__item"><a href="#" class="footer__link">Поддержка</a></li>
+            </ul>
+            <ul class="footer__list">
+                <li class="footer__item"><a href="#" class="footer__link">Условия оплаты</a></li>
+                <li class="footer__item"><a href="#" class="footer__link">Обмен и возврат</a></li>
+                <li class="footer__item"><a href="#" class="footer__link">Доставка</a></li>
+            </ul>
+            <ul class="footer__list">
+                <li class="footer__item"><a href="#" class="footer__link">Заказать звонок</a></li>
+                <li class="footer__item"><a href="#" class="footer__link">Магазины</a></li>
+                <li class="footer__item"><a href="#" class="footer__link">ЦСО №3</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

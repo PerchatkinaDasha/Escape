@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/main.css">
+    <link rel="stylesheet" href="/fonts/font.css">
+    <title>ESCAPE</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="logo">
+                    <img src="/images/Group 87.svg" alt="логотип" class="logo_img">
+                </a>
+                <nav class="menu">
+                    <ul class="menu__list">
+                        <li class="menu__list-item">
+                            <a href="snake.html" class="menu__list-link">
+                                <img src="/images/gaming_tablet.svg" alt="джойстик" class="gaming__tablet">
+                            </a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a href="#" class="menu__list-link">
+                                <img src="/images/cart.svg" alt="корзина" class="cart">
+                            </a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a href="form.html" class="menu__list-link">
+                                <img src="/images/account.svg" alt="аккаунт" class="account">
+                            </a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a href="#" class="menu__list-link menu__tablet">
+                                <img src="/images/menu.svg" alt="полоски меню">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <!-- Модальное окно -->
+                <div id="modal" class="modal">
+                    <div class="modal-content">
+                        <button class="close" aria-label="Закрыть">&times;</button>
+                        <ul>
+                            <li><a href="#">Личный кабинет</a></li>
+                            <li><a href="#">О компании</a></li>
+                            <li><a href="#">Обмен и возврат</a></li>
+                            <li><a href="#">Поддержка</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main-content">
+        <nav class="nav-buttons">
+            <button class="nav-btn">Все</button>
+            <button class="nav-btn">Вверх</button>
+            <button class="nav-btn">Низ</button>
+            <button class="nav-btn">Предметы</button>
+        </nav>
+        <div class="gallery">
+            <!-- У каждой карточки теперь уникальный id, передаваемый через URL -->
+            <a href="product.html?id=1" class="gallery__item">
+                <img src="./images/эскейп.png" alt="логотип на футболке" class="card__image">
+            </a>
+            <a href="product.html?id=2" class="gallery__item">
+                <img src="./images/words.png" alt="принт со словами" class="card__image">
+            </a>
+            <a href="product.html?id=3" class="gallery__item">
+                <img src="./images/it`s okay.png" alt="итс окей" class="card__image">
+            </a>
+            <a href="product.html?id=4" class="gallery__item">
+                <img src="./images/human.png" alt="хьюмен" class="card__image">
+            </a>
+            <a href="product.html?id=5" class="gallery__item">
+                <img src="./images/штрих.png" alt="логотив со штрихкодом" class="card__image">
+            </a>
+            <a href="product.html?id=6" class="gallery__item">
+                <img src="./images/вер из май маинд.png" alt="принт вер из май маинд" class="card__image">
+            </a>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__menu">
+            <ul class="footer__list">
+                <li class="footer__item"><a href="index.html" class="footer__link">О компании</a></li>
+                <li class="footer__item"><a href="main.html" class="footer__link">Каталог</a></li>
+            </ul>
+            <ul class="footer__list">
+                <li class="footer__item"><a href="contact.html" class="footer__link">Контакты</a></li>
+                <li class="footer__item"><a href="#" class="footer__link">Поддержка</a></li>
+            </ul>
+            <ul class="footer__list">
+                <li class="footer__item"><a href="oder.html" class="footer__link">Условия оплаты</a></li>
+                <li class="footer__item"><a href="return.html" class="footer__link">Обмен и возврат</a></li>
+                <li class="footer__item"><a href="delivery.html" class="footer__link">Доставка</a></li>
+            </ul>
+            <ul class="footer__list">
+                <li class="footer__item"><a href="#" class="footer__link">Заказать звонок</a></li>
+                <li class="footer__item"><a href="#" class="footer__link">Магазины</a></li>
+                <li class="footer__item"><a href="#" class="footer__link">ЦСО №3</a></li>
+            </ul>
+        </div>
+        <div class="footer__divider"></div> <!-- Полоска -->
+        <div class="footer__bottom">
+            <p class="footer__text">2024, © ESCAPE, СВЯЗЬ-СВЯЗЬ-СВЯЗЬ</p>
+        </div>
+    </footer>
+    <script src="/script.js"></script>
+</body>
+</html>
